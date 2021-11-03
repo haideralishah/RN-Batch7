@@ -1,34 +1,23 @@
-import React, { useState } from 'react';
-import { View, Text, Image, StyleSheet, TextInput, FlatList, ScrollView } from 'react-native';
-import Logo from '../../assets/favicon.png'
+import React from 'react';
+import { View, Text, Image, StyleSheet, TextInput, FlatList, ScrollView, TouchableOpacity } from 'react-native';
 
-const fruits = ['apple', 'banana', 'oranges']
 
 export default function HelloWorld({ navigation }) {
-    const [userName, setUserName] = useState('');
+
+    const changePage = () => {
+        navigation.navigate("Counter");
+    }
+
     return (
 
         <View>
             <Text>Hello Stack Navigation</Text>
+            <TouchableOpacity onPress={changePage}>
+                <Text>Counte Here</Text>
+            </TouchableOpacity>
         </View>
 
 
 
     )
 }
-
-const style = StyleSheet.create({
-    text: {
-        fontSize: 40,
-        color: 'green',
-        fontWeight: 'bold'
-    },
-    logo: {
-        width: 20,
-        height: 20
-    },
-    cricketerImg: {
-        width: 100,
-        height: 100
-    }
-});

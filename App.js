@@ -7,7 +7,7 @@ import RouteNavigation from './src/config/navigation';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View >
       <RouteNavigation />
       <StatusBar style="auto" />
     </View>
@@ -25,13 +25,3 @@ export default function App() {
 
 
 
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
